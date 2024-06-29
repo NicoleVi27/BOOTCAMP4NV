@@ -12,33 +12,44 @@
             <h1>CONTACTO</h1>
             <p>Contáctenos</p>
         </div>
+        <!-- Formulario para enviar información con validación de correo electrónico -->
         <form action="#" method="POST" id="formulario">
             <table class="contact">
                 <tbody>
+                    <!-- Línea del formulario para el nombre -->
                     <tr class="contact_line">
                         <td class="contact_sign"><label for="name">Nombre</label></td>
                         <td class="contact_input"><input type="text" name="name" id="name"></td>
                     </tr>
+                    <!-- Línea del formulario para el correo electrónico -->
                     <tr class="contact_line">
                         <td class="contact_sign"><label for="email">Correo Electrónico</label></td>
                         <td class="contact_input"><input type="email" name="email" id="correo"></td>
                     </tr>
+                    <!-- Línea del formulario para confirmar el correo electrónico -->
                     <tr class="contact_line">
                         <td class="contact_sign"><label for="email_confirm">Correo Electrónico (confirmación)</label></td>
-                        <td class="contact_input"><input type="email" name="email_confirm" id="correo_confirmar"></td>
+                        <td class="contact_input">
+                            <input type="email" name="email_confirm" id="correo_confirmar">
+                            <!-- Mensaje de error para la confirmación del correo -->
+                            <p id="mensaje-error-correo" class="alerta" style="display: none;"></p>
+                        </td>
                     </tr>
+                    <!-- Línea del formulario para el contenido -->
                     <tr class="contact_content">
                         <td class="contact_sign"><label for="content">Contenido</label></td>
                         <td class="contact_input"><textarea name="content" id="content"></textarea></td>
                     </tr>
                 </tbody>
             </table>
+            <!-- Botones para restablecer y enviar el formulario -->
             <div class="contact_btn_area">
                 <button type="reset" class="contact_btn reset_btn">Restablecer</button>
                 <button type="submit" class="contact_btn submit_btn">Enviar</button>
             </div>
         </form>
     </section>
+    
     <script type="text/javascript" src="javascripts/validation.js"></script>
 </body>
 </html>
